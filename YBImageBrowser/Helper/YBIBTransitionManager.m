@@ -83,6 +83,7 @@
                     toView.alpha = 0;
                     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
                         toView.alpha = 1;
+                        toView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:1];
                         self.animateImageView.frame = [self enter_toFrame];
                     } completion:^(BOOL finished) {
                         [self.animateImageView removeFromSuperview];
@@ -123,7 +124,7 @@
                     CGRect toFrame = [self out_toFrameWithView:fromAnimateView.superview];
                     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
                         
-//                        fromView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+                        fromView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
                         id sourceObj = [self out_toSourceObj];
                         if ([sourceObj isKindOfClass:UIView.class])
                             fromAnimateView.contentMode = ((UIImageView *)sourceObj).contentMode;
