@@ -110,7 +110,7 @@
                 UIView *fromAnimateView = [self out_fromAnimateView];
                 [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
 //                    fromAnimateView.alpha = 0;
-                    fromView.alpha = 0;
+//                    fromView.alpha = 0;
                 } completion:^(BOOL finished) {
                     [self completeTransition:transitionContext isEnter:NO];
                 }];
