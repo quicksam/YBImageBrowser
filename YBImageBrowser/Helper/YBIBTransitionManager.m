@@ -109,8 +109,8 @@
             case YBImageBrowserTransitionTypeFade: {
                 UIView *fromAnimateView = [self out_fromAnimateView];
                 [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-//                    fromAnimateView.alpha = 0;
-//                    fromView.alpha = 0;
+                    fromAnimateView.alpha = 0;
+                    fromView.alpha = 0;
                 } completion:^(BOOL finished) {
                     [self completeTransition:transitionContext isEnter:NO];
                 }];
@@ -123,7 +123,7 @@
                     CGRect toFrame = [self out_toFrameWithView:fromAnimateView.superview];
                     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
                         
-                        fromView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+//                        fromView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
                         id sourceObj = [self out_toSourceObj];
                         if ([sourceObj isKindOfClass:UIView.class])
                             fromAnimateView.contentMode = ((UIImageView *)sourceObj).contentMode;
